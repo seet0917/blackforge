@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Theme Website</title>
+    <link rel="stylesheet" href="balckforge.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-left">
+            <div class="logo">BLACKFORGE</div>
+            <nav>
+                <a href="blackforge.html" class="nav-item" data-key="nav1">页面 1</a>
+                <a href="page2.html" class="nav-item" data-key="nav2">页面 2</a>
+                <a href="page3.html" class="nav-item" data-key="nav3">页面 3</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="lang-menu" id="langMenu">
+                <ul>
+                    <li onclick="changeLanguage('en')">English</li>
+                    <li onclick="changeLanguage('zh')">中文</li>
+                    <li onclick="changeLanguage('id')">Bahasa Indonesia</li>
+                    <li onclick="changeLanguage('th')">ไทย</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="Beautiful-Girl-With-Fox-Ears-Pink-Cat-Girl-2.mp4" type="video/mp4">
+                你的浏览器不支持视频播放。
+            </video>
+            <div class="overlay">
+                <h1 id="main-title">欢迎来到我们的世界</h1>
+            </div>
+        </div>
+    </main>
+
+    <script src="blackforge.js"></script>
+</body>
+</html>

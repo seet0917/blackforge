@@ -1,0 +1,129 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #000; /* 纯黑背景 */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header 样式 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); /* 半透明黑色 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 汉堡菜单与语言选择 */
+.nav-right {
+    position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.lang-menu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #111;
+    border: 1px solid #333;
+    display: none; /* 默认隐藏 */
+    padding: 10px 0;
+    width: 160px;
+}
+
+.lang-menu.active {
+    display: block;
+}
+
+.lang-menu ul {
+    list-style: none;
+}
+
+.lang-menu li {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-menu li:hover {
+    background: #222;
+}
+
+/* 视频全屏样式 */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保视频铺满屏幕 */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
