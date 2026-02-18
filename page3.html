@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Theme Website</title>
+    <link rel="stylesheet" href="page3.css">
+    <link rel="stylesheet" href="burger.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-left">
+            <div class="logo">BLACKFORGE</div>
+            <nav>
+                <a href="blackforge.html" class="nav-item" data-key="navHome">Mainpage</a>
+                <a href="page2.html" class="nav-item" data-key="nav1">page2</a>
+                <a href="page3.html" class="nav-item" data-key="nav2">page3</a>
+                <a href="page4.html" class="nav-item" data-key="nav3">page4</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="lang-menu" id="langMenu">
+                <ul class="mobile-nav">
+                <li><a href="blackforge.html" data-key="navHome">Home</a></li>
+                <li><a href="page1.html" data-key="nav1">Page 2</a></li>
+                <li><a href="page2.html" data-key="nav2">Page 3</a></li>
+                <li><a href="page3.html" data-key="nav3">Page 4</a></li>
+            </ul>
+            <hr style="border: 0.5px solid #222; margin: 10px 0;">
+                <ul>
+                    <li onclick="changeLanguage('en')">English</li>
+                    <li onclick="changeLanguage('zh')">中文</li>
+                    <li onclick="changeLanguage('id')">Bahasa Indonesia</li>
+                    <li onclick="changeLanguage('th')">ไทย</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="27230.jpg" type="jpg">
+                <source src=".mp4" type="video/mp4">
+                你的浏览器不支持视频播放。
+            </video>
+            <div class="overlay">
+                <h1 id="main-title"></h1>
+            </div>
+        </div>
+    </main>
+
+    <script src="blackforge.js"></script>
+</body>
+</html>

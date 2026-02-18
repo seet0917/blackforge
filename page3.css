@@ -1,0 +1,264 @@
+/* 基础设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+
+body {
+    font-family: sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* 导航栏样式 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #888;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 汉堡菜单 */
+.nav-right {
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 6px 0;
+}
+
+.lang-menu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #111;
+    border: 1px solid #333;
+    display: none;
+    width: 150px;
+}
+
+.lang-menu.active {
+    display: block;
+}
+
+.lang-menu li {
+    padding: 12px 20px;
+    list-style: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.lang-menu li:hover {
+    background: #222;
+}
+
+/* 照片区域 */
+.image-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+
+/* 联系我们区域 */
+.contact-section {
+    padding: 100px 50px;
+    background: #000;
+    border-top: 1px solid #222;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 15px 40px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 手机端响应式设计 (Media Queries) */
+
+@media (max-width: 768px) {
+
+    /* 1. 导航栏调整 */
+    header {
+        padding: 15px 25px;
+        /* 缩小间距，腾出屏幕空间 */
+    }
+
+    .nav-left nav {
+        display: none;
+        /* 手机端隐藏文字导航，只保留 LOGO 和 汉堡菜单 */
+    }
+
+    .logo {
+        font-size: 18px;
+        /* 稍微缩小 LOGO */
+    }
+
+    /* 2. 主视觉文字调整 */
+    .overlay h1 {
+        font-size: 2rem;
+        /* 缩小标题，防止文字断行太丑 */
+        letter-spacing: 3px;
+        padding: 0 20px;
+    }
+
+    /* 3. Contact Us 区域调整 (从横向变纵向) */
+    .contact-section {
+        padding: 60px 25px;
+        /* 减少上下留白 */
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        /* 核心：让联系信息和表单上下排列 */
+        gap: 40px;
+        /* 增加上下间距 */
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        /* 确保填满宽度 */
+        text-align: center;
+        /* 手机端建议文字居中，更有设计感 */
+    }
+
+    /* 4. 表单元素调整 */
+    input,
+    textarea {
+        padding: 12px;
+        /* 稍微减小输入框厚度 */
+        font-size: 16px;
+        /* 手机端输入框建议至少 16px，防止 iOS 自动放大 */
+    }
+
+    .submit-btn {
+        width: 100%;
+        /* 手机端提交按钮做成全宽，更方便点击 */
+        padding: 15px;
+    }
+
+    /* 5. 语言菜单调整 */
+    .lang-menu {
+        width: 130px;
+        /* 稍微调窄一点 */
+    }
+}
+
+/* 针对超小屏幕手机 (如 iPhone SE) */
+@media (max-width: 480px) {
+    .overlay h1 {
+        font-size: 1.6rem;
+    }
+
+    .contact-section {
+        padding: 50px 15px;
+    }
+}
+
+/* 电脑端：隐藏菜单里的页面链接 */
+.mobile-nav {
+    display: none;
+}
+

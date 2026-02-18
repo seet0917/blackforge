@@ -1,0 +1,37 @@
+/* 电脑端：隐藏菜单里的页面链接 */
+.mobile-nav {
+    display: none;
+}
+
+/* 手机端适配 (768px) */
+@media (max-width: 768px) {
+    .nav-left nav {
+        display: none; /* 隐藏顶部的横排导航 */
+    }
+
+    .lang-menu {
+        width: 200px; /* 稍微调宽一点，因为有文字了 */
+    }
+
+    .mobile-nav {
+        display: block; /* 手机端在菜单里显示出来 */
+    }
+
+    .mobile-nav li {
+        padding: 0; /* 清除默认 padding */
+    }
+
+    .mobile-nav a {
+        display: block;
+        padding: 15px 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .mobile-nav a:hover {
+        background: #222;
+    }
+}

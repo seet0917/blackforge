@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Theme Website</title>
-    <link rel="stylesheet" href="balckforge.css">
+    <title>Blackforge | Homepage</title>
+    <link rel="stylesheet" href="blackforge.css">
+    <link rel="stylesheet" href="burger.css">
 </head>
+
 <body>
 
     <header>
         <div class="nav-left">
             <div class="logo">BLACKFORGE</div>
             <nav>
-                <a href="blackforge.html" class="nav-item" data-key="nav1">页面 1</a>
-                <a href="page2.html" class="nav-item" data-key="nav2">页面 2</a>
-                <a href="page3.html" class="nav-item" data-key="nav3">页面 3</a>
+                <a href="blackforge.html" class="nav-item" data-key="navHome">Home</a>
+                <a href="page2.html" class="nav-item" data-key="nav1">Page 2</a>
+                <a href="page3.html" class="nav-item" data-key="nav2">Page 3</a>
+                <a href="page4.html" class="nav-item" data-key="nav3">Page 4</a>
             </nav>
         </div>
 
@@ -25,10 +29,17 @@
                 <span></span>
             </div>
             <div class="lang-menu" id="langMenu">
+                <ul class="mobile-nav">
+                    <li><a href="blackforge.html" data-key="navHome">Home</a></li>
+                    <li><a href="page2.html" data-key="nav1">Page 2</a></li>
+                    <li><a href="page3.html" data-key="nav2">Page 3</a></li>
+                    <li><a href="page4.html" data-key="nav3">Page 4</a></li>
+                </ul>
+                <hr style="border: 0.5px solid #222; margin: 10px 0;">
                 <ul>
                     <li onclick="changeLanguage('en')">English</li>
                     <li onclick="changeLanguage('zh')">中文</li>
-                    <li onclick="changeLanguage('id')">Bahasa Indonesia</li>
+                    <li onclick="changeLanguage('id')">Indo</li>
                     <li onclick="changeLanguage('th')">ไทย</li>
                 </ul>
             </div>
@@ -36,17 +47,45 @@
     </header>
 
     <main>
-        <div class="video-container">
-            <video autoplay muted loop playsinline id="bg-video">
-                <source src="Beautiful-Girl-With-Fox-Ears-Pink-Cat-Girl-2.mp4" type="video/mp4">
-                你的浏览器不支持视频播放。
-            </video>
+        <div class="image-container">
+            <img src="bg1.jpg" alt="Background" id="bg-image">
             <div class="overlay">
-                <h1 id="main-title">欢迎来到我们的世界</h1>
+                <h1 id="main-title" data-key="mainTitle">欢迎来到我的网页</h1>
             </div>
         </div>
     </main>
 
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-key="contactTitle">Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 data-key="getInTouch">Get in Touch</h3>
+                    <p data-key="contactDesc">如果您有任何合作意向，请随时联系我们。</p>
+                    <div class="info-item">
+                        <span>Email</span>
+                        <p>hello@blackforge.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn" data-key="sendMessage">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="blackforge.js"></script>
 </body>
+
 </html>
+<!-- <div class="video-container">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="27230.jpg" type="jpg">
+                <source src=".mp4" type="video/mp4">
+                你的浏览器不支持视频播放。
+            </video> -->
